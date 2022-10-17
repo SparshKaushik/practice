@@ -35,10 +35,10 @@ void display() {
 
 int main() {
     printf("Stack using linked list");
-    printf("1. Push\n2. Pop\n3. Display\n4. Exit\nEnter your choice: ");
     int choice, data;
-    scanf("%d", &choice);
     while (choice != 4) {
+        printf("\n1. Push\n2. Pop\n3. Display\n4. Exit\nEnter your choice: ");
+        scanf("%d", &choice);
         switch (choice) {
             case 1:
                 printf("Enter data: ");
@@ -52,7 +52,8 @@ int main() {
                 display();
                 break;
             case 4:
-                exit(0);
+                printf("Thank you for using the Program\nExiting...");
+                break;
             default:
                 printf("Invalid choice");
                 break;
