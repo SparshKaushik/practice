@@ -24,7 +24,7 @@ void pop(struct stack *s){
         printf("Stack Underflow");
     }
     else{
-        printf("The popped element is %d",s->arr[s->top]);
+        printf("The popped element is %d\n",s->arr[s->top]);
         s->top--;
     }
 }
@@ -36,7 +36,6 @@ void display(struct stack *s){
     else{
         printf("Your Stack : ");
         for(int i=0; i<=s->top; i++){
-            printf("%d ", i);
             printf("%d ", s->arr[i]);
         }
         printf("\n");
@@ -45,9 +44,10 @@ void display(struct stack *s){
 
 void main(){
     stack *s;
+    s->top = -1;
     int choice;
     while (choice!=4){
-        printf("What to do ?\n1. PUSH\n2. POP\n3. DISPLAY\n4. EXIT\n\nEnter your choice : ");
+        printf("What to do ?\n1. PUSH\n2. POP\n3. DISPLAY\n4. EXIT\nEnter your choice : ");
         scanf("%d", &choice);
         switch(choice){
             case 1:
