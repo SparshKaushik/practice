@@ -33,10 +33,16 @@ void delete() {
     if (head == NULL) {
         printf("List is empty");
     } else {
-        struct employee *temp = tail;
-        tail = tail->prev;
-        tail->next = NULL;
-        free(temp);
+        if (head == tail) {
+            free(head);
+            head = NULL;
+            tail = NULL;
+        } else {
+            struct employee *temp = head;
+            head = head->next;
+            head->prev = NULL;
+            free(temp);
+        }
     }
 }
 
