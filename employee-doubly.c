@@ -51,6 +51,7 @@ void display() {
     while (temp != NULL) {
         printf("Employee #%d\n%s", temp->id, temp->name);
         temp = temp->next;
+        printf("\n");
     }
 }
 

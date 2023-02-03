@@ -1,5 +1,6 @@
 #include <stdio.h>
 #define MAX 100
+
 struct stack {
     int top;
     int arr[MAX];
